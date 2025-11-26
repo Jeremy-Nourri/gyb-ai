@@ -8,50 +8,43 @@ const UseCases: React.FC = () => {
       icon: MessageSquare,
       title: "Support Client",
       tag: "Réactivité",
-      desc: "Automatisation des réponses aux questions fréquentes pour un service 24/7.",
-      gradient: "from-blue-500/20 to-cyan-500/20"
+      desc: "Automatisation des réponses aux questions fréquentes pour un service 24/7."
     },
     {
       icon: FileText,
       title: "Analyse Docs",
       tag: "Administratif",
-      desc: "Extraction intelligente des données de vos contrats et factures.",
-      gradient: "from-emerald-500/20 to-teal-500/20"
+      desc: "Extraction intelligente des données de vos contrats et factures."
     },
     {
       icon: Users,
       title: "Assistants Métiers",
       tag: "Productivité",
-      desc: "Copilotes IA pour aider vos équipes dans leurs tâches quotidiennes.",
-      gradient: "from-orange-500/20 to-amber-500/20"
+      desc: "Copilotes IA pour aider vos équipes dans leurs tâches quotidiennes."
     },
     {
       icon: Zap,
       title: "Workflows",
       tag: "Gain de temps",
-      desc: "Connexion CRM/ERP/Mails pour exécuter les tâches répétitives.",
-      gradient: "from-purple-500/20 to-pink-500/20"
+      desc: "Connexion CRM/ERP/Mails pour exécuter les tâches répétitives."
     },
     {
       icon: TrendingUp,
       title: "Marketing",
       tag: "Croissance",
-      desc: "Personnalisation des campagnes et qualification automatique des leads.",
-      gradient: "from-red-500/20 to-rose-500/20"
+      desc: "Personnalisation des campagnes et qualification automatique des leads."
     },
     {
       icon: ShieldCheck,
       title: "Sécurité & MCP",
       tag: "Infrastructure",
-      desc: "Serveurs sécurisés pour garder la maîtrise totale de vos données.",
-      gradient: "from-indigo-500/20 to-violet-500/20"
+      desc: "Serveurs sécurisés pour garder la maîtrise totale de vos données."
     },
     {
       icon: Laptop,
       title: "Apps Sur-Mesure",
       tag: "Innovation",
-      desc: "Interfaces et outils spécifiques développés pour vos besoins.",
-      gradient: "from-fuchsia-500/20 to-purple-500/20"
+      desc: "Interfaces et outils spécifiques développés pour vos besoins."
     }
   ];
 
@@ -98,8 +91,8 @@ const UseCases: React.FC = () => {
             >
               <div className="h-full p-6 rounded-2xl bg-slate-900/40 backdrop-blur-md border border-white/5 hover:border-white/10 transition-all duration-300 flex flex-col overflow-hidden relative shadow-lg hover:shadow-2xl hover:shadow-brand-900/10">
                 
-                {/* Subtle Gradient Glow on Hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
+                {/* Subtle Gradient Glow on Hover - Harmonized to Orange for all cards */}
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-500/20 to-orange-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 
                 {/* Shine Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />

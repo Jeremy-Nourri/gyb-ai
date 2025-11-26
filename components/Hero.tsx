@@ -25,20 +25,20 @@ const Hero: React.FC = () => {
             <span className="gradient-text">l'IA & l'Automatisation</span>
           </h1>
           
-          <p className="text-lg text-slate-100 mb-8 max-w-xl leading-relaxed">
+          <p className="text-slate-100 mb-8 max-w-xl leading-relaxed">
             Nous intégrons l’intelligence artificielle au cœur de votre entreprise pour optimiser vos opérations, réduire vos coûts et décupler votre productivité.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="#contact"
+              href="mailto:contact@growyourbusiness.fr?subject=Discussion%20Projet"
               className="px-8 py-4 rounded-xl gradient-bg text-white font-bold text-lg shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
             >
               Discutons de votre projet
               <ArrowRight className="w-5 h-5" />
             </a>
             <a
-              href="#audit"
+              href="mailto:contact@growyourbusiness.fr?subject=Demande%20d'audit%20gratuit"
               className="px-8 py-4 rounded-xl bg-slate-800/50 border border-white/10 text-white font-semibold hover:bg-slate-800 transition-all flex items-center justify-center"
             >
               Obtenir un audit gratuit

@@ -23,26 +23,11 @@ const Navbar: React.FC = () => {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
+    setIsMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      // Fermer le menu d'abord pour éviter les conflits visuels
-      setIsMobileMenuOpen(false);
-      
-      // Utilisation de scrollIntoView qui respecte la propriété CSS scroll-margin-top
-      setTimeout(() => {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
-  };
-
-  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    setIsMobileMenuOpen(false);
-    const element = document.getElementById('contact');
-    if (element) {
-      setTimeout(() => {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+      // scrollIntoView with smooth behavior will respect scroll-margin-top CSS
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -104,8 +89,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="#contact"
-            onClick={handleContactClick}
+            href="mailto:contact@growyourbusiness.fr"
             className="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-brand-500/50 transition-all text-sm font-semibold text-white cursor-pointer"
           >
             Contact
@@ -150,9 +134,8 @@ const Navbar: React.FC = () => {
               
               <motion.div variants={itemVariants} className="pt-4 border-t border-white/10">
                 <a
-                  href="#contact"
+                  href="mailto:contact@growyourbusiness.fr?subject=Discussion%20Projet"
                   className="block w-full text-center px-5 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-lg shadow-lg cursor-pointer active:scale-95 transition-transform"
-                  onClick={handleContactClick}
                 >
                   Discutons de votre projet
                 </a>

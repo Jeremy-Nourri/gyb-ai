@@ -10,6 +10,9 @@ const Footer: React.FC = () => {
     }
   };
 
+  const linkedinUrl = "https://www.linkedin.com/company/growyourbusiness-it";
+  const emailContact = "mailto:contact@growyourbusiness.fr";
+
   return (
     <footer id="contact" className="bg-slate-950 border-t border-white/10 pt-24 pb-12 scroll-mt-32">
       <div className="container mx-auto px-6">
@@ -25,11 +28,11 @@ const Footer: React.FC = () => {
               Ne laissez pas vos concurrents prendre l'avantage avec l'IA. Discutons de vos besoins et construisons votre solution dès aujourd'hui.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="mailto:contact@growyourbusiness.fr" className="px-8 py-4 bg-white text-brand-600 font-bold rounded-xl hover:bg-slate-100 transition-colors flex items-center justify-center gap-2">
+                <a href={`${emailContact}?subject=Prise%20de%20rendez-vous`} className="px-8 py-4 bg-white text-brand-600 font-bold rounded-xl hover:bg-slate-100 transition-colors flex items-center justify-center gap-2">
                     Prendre rendez-vous
                     <ArrowRight className="w-5 h-5" />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-brand-700/50 border border-white/20 text-white font-semibold rounded-xl hover:bg-brand-700 transition-colors">
+                <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-brand-700/50 border border-white/20 text-white font-semibold rounded-xl hover:bg-brand-700 transition-colors">
                     Nous suivre sur LinkedIn
                 </a>
             </div>
@@ -65,11 +68,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm text-slate-100">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                contact@gyb.fr
+                <a href={emailContact} className="hover:text-brand-500 transition-colors">contact@growyourbusiness.fr</a>
               </li>
               <li className="flex items-center gap-2">
                 <Linkedin className="w-4 h-4" />
-                LinkedIn
+                <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-brand-500 transition-colors">LinkedIn</a>
               </li>
               <li>Arras, France</li>
             </ul>
