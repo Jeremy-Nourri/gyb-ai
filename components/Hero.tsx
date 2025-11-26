@@ -20,12 +20,12 @@ const Hero: React.FC = () => {
             <span>Expertise IA & Automatisation</span>
           </div>
           
-          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6">
+          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 text-white">
             Accélérez votre croissance grâce à <br />
             <span className="gradient-text">l'IA & l'Automatisation</span>
           </h1>
           
-          <p className="text-lg text-slate-300 mb-8 max-w-xl leading-relaxed">
+          <p className="text-lg text-slate-100 mb-8 max-w-xl leading-relaxed">
             Nous intégrons l’intelligence artificielle au cœur de votre entreprise pour optimiser vos opérations, réduire vos coûts et décupler votre productivité.
           </p>
           
@@ -66,15 +66,15 @@ const Hero: React.FC = () => {
                 <span className="text-green-500 font-bold text-xs">+340%</span>
               </div>
               <div>
-                <div className="text-xs text-slate-400">ROI Mensuel</div>
-                <div className="font-bold">Optimisé</div>
+                <div className="text-xs text-slate-300">ROI Mensuel</div>
+                <div className="font-bold text-white">Optimisé</div>
               </div>
             </div>
 
             <div className="absolute -bottom-6 -right-6 glass-card p-4 rounded-xl flex items-center gap-3 animate-pulse shadow-xl border-l-4 border-l-brand-500">
               <div>
-                <div className="text-xs text-slate-400">Statut Système</div>
-                <div className="font-bold flex items-center gap-2">
+                <div className="text-xs text-slate-300">Statut Système</div>
+                <div className="font-bold text-white flex items-center gap-2">
                   <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                   IA Active
                 </div>

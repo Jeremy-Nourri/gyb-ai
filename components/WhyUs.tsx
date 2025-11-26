@@ -39,7 +39,7 @@ const WhyUs: React.FC = () => {
               Pourquoi choisir <br />
               <span className="text-brand-500">Grow Your Business ?</span>
             </motion.h2>
-            <p className="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="text-slate-100 text-lg leading-relaxed max-w-2xl mx-auto">
               Technologie de pointe, pragmatisme business et sécurité maximale. 
             </p>
         </div>
@@ -58,14 +58,14 @@ const WhyUs: React.FC = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(234,88,12,0.15),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 <div className="relative shrink-0 w-16 h-16 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center group-hover:scale-110 group-hover:border-brand-500/50 transition-all duration-300">
-                    <benefit.icon className="w-8 h-8 text-slate-300 group-hover:text-brand-500 transition-colors duration-300" />
+                    <benefit.icon className="w-8 h-8 text-slate-100 group-hover:text-brand-500 transition-colors duration-300" />
                     {/* Icon Glow */}
                     <div className="absolute inset-0 rounded-full bg-brand-500/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 
                 <div className="relative">
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-brand-500 transition-colors">{benefit.title}</h3>
-                    <p className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
+                    <p className="text-slate-100 leading-relaxed group-hover:text-white transition-colors">
                         {benefit.desc}
                     </p>
                 </div>

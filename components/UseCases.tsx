@@ -56,7 +56,7 @@ const UseCases: React.FC = () => {
   ];
 
   return (
-    <section id="usecases" className="py-24 bg-slate-950 relative overflow-hidden">
+    <section id="usecases" className="py-24 bg-slate-950 relative overflow-hidden scroll-mt-32">
       {/* Soft Background Globs */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-600/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
@@ -80,7 +80,7 @@ const UseCases: React.FC = () => {
             className="text-3xl md:text-5xl font-bold mb-6 text-white"
           >
             Comment l'IA transforme <br/>
-            <span className="text-slate-500">votre quotidien</span>
+            <span className="text-slate-200">votre quotidien</span>
           </motion.h2>
         </div>
 
@@ -109,7 +109,7 @@ const UseCases: React.FC = () => {
                     <div className="p-3 rounded-xl bg-slate-800/80 border border-white/5 group-hover:bg-white/10 transition-colors duration-300 shadow-inner">
                         <item.icon className="w-6 h-6 text-brand-500 group-hover:text-white transition-colors" />
                     </div>
-                    <span className="px-3 py-1 rounded-full bg-slate-800/50 border border-white/5 text-[10px] uppercase font-bold text-slate-400 tracking-wide group-hover:text-white group-hover:bg-white/10 transition-all">
+                    <span className="px-3 py-1 rounded-full bg-gradient-to-r from-brand-500 to-brand-600 text-[10px] uppercase font-bold text-white tracking-wide shadow-md">
                         {item.tag}
                     </span>
                   </div>
@@ -118,7 +118,7 @@ const UseCases: React.FC = () => {
                     {item.title}
                   </h3>
                   
-                  <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-200 transition-colors flex-grow">
+                  <p className="text-slate-100 text-sm leading-relaxed group-hover:text-white transition-colors flex-grow">
                     {item.desc}
                   </p>
                 </div>
@@ -134,13 +134,16 @@ const UseCases: React.FC = () => {
              transition={{ delay: cases.length * 0.05 }}
              whileHover={{ scale: 1.02 }}
              className="h-full min-h-[240px] rounded-2xl border-2 border-dashed border-slate-800 hover:border-brand-500/50 bg-slate-900/20 hover:bg-slate-900/40 transition-all duration-300 flex flex-col items-center justify-center text-center cursor-pointer group p-6"
-             onClick={() => window.location.href = '#contact'}
+             onClick={() => {
+                const element = document.getElementById('contact');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+             }}
           >
              <div className="w-16 h-16 rounded-full bg-brand-500/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-brand-500 group-hover:shadow-lg group-hover:shadow-brand-500/40 transition-all duration-300">
                 <ArrowUpRight className="w-8 h-8 text-brand-500 group-hover:text-white transition-colors" />
              </div>
              <h3 className="text-lg font-bold text-white mb-2">Un projet spécifique ?</h3>
-             <p className="text-sm text-slate-400 group-hover:text-brand-300 transition-colors">Développons votre solution sur-mesure.</p>
+             <p className="text-sm text-slate-100 group-hover:text-white transition-colors">Développons votre solution sur-mesure.</p>
           </motion.div>
         </div>
       </div>

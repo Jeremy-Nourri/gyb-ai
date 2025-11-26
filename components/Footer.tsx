@@ -2,8 +2,16 @@ import React from 'react';
 import { ArrowRight, Mail, Linkedin, Rocket } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer id="contact" className="bg-slate-950 border-t border-white/10 pt-24 pb-12">
+    <footer id="contact" className="bg-slate-950 border-t border-white/10 pt-24 pb-12 scroll-mt-32">
       <div className="container mx-auto px-6">
         
         {/* Final CTA */}
@@ -13,7 +21,7 @@ const Footer: React.FC = () => {
           
           <div className="relative z-10 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Prêt à transformer votre entreprise ?</h2>
-            <p className="text-white/80 text-lg mb-10">
+            <p className="text-slate-100 text-lg mb-10">
               Ne laissez pas vos concurrents prendre l'avantage avec l'IA. Discutons de vos besoins et construisons votre solution dès aujourd'hui.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -37,38 +45,38 @@ const Footer: React.FC = () => {
                 </div>
                 <span className="text-xl font-bold text-white">Grow<span className="text-brand-500">Your</span>Business</span>
             </div>
-            <p className="text-slate-300 text-sm max-w-sm">
+            <p className="text-slate-100 text-sm max-w-sm">
               L'ESN experte en Intelligence Artificielle et Automatisation pour les entreprises ambitieuses.
             </p>
           </div>
           
           <div>
-            <h4 className="font-bold text-white mb-6">Services</h4>
-            <ul className="space-y-3 text-sm text-slate-300">
-              <li><a href="#" className="hover:text-brand-500 transition-colors">Intégration IA</a></li>
-              <li><a href="#" className="hover:text-brand-500 transition-colors">Automatisation</a></li>
-              <li><a href="#" className="hover:text-brand-500 transition-colors">Serveurs MCP</a></li>
-              <li><a href="#" className="hover:text-brand-500 transition-colors">Développement</a></li>
+            <h4 className="font-bold text-white mb-6">Navigation</h4>
+            <ul className="space-y-3 text-sm text-slate-100">
+              <li><a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="hover:text-brand-500 transition-colors cursor-pointer">Services</a></li>
+              <li><a href="#usecases" onClick={(e) => handleNavClick(e, 'usecases')} className="hover:text-brand-500 transition-colors cursor-pointer">Cas Clients</a></li>
+              <li><a href="#process" onClick={(e) => handleNavClick(e, 'process')} className="hover:text-brand-500 transition-colors cursor-pointer">Process</a></li>
+              <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="hover:text-brand-500 transition-colors cursor-pointer">À propos</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-white mb-6">Contact</h4>
-            <ul className="space-y-3 text-sm text-slate-300">
+            <ul className="space-y-3 text-sm text-slate-100">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                contact@growyourbusiness.fr
+                contact@gyb.fr
               </li>
               <li className="flex items-center gap-2">
                 <Linkedin className="w-4 h-4" />
                 LinkedIn
               </li>
-              <li>Paris, France</li>
+              <li>Arras, France</li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-300">
           <p>© {new Date().getFullYear()} Grow Your Business. Tous droits réservés.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Mentions Légales</a>

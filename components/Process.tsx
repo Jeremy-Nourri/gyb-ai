@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const Process: React.FC = () => {
   const steps = [
@@ -9,7 +9,7 @@ const Process: React.FC = () => {
     { num: "04", title: "Suivi & Optimisation", desc: "Accompagnement continu pour affiner les modèles et maximiser le ROI." }
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -19,12 +19,12 @@ const Process: React.FC = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 50 } }
   };
 
-  const lineVariants = {
+  const lineVariants: Variants = {
     hidden: { scaleX: 0, originX: 0, opacity: 0 },
     visible: { 
       scaleX: 1, 
@@ -35,14 +35,14 @@ const Process: React.FC = () => {
   };
 
   return (
-    <section id="process" className="py-24 bg-slate-900 border-y border-white/5 overflow-hidden">
+    <section id="process" className="py-24 bg-slate-900 border-y border-white/5 overflow-hidden scroll-mt-32">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
           <motion.h2 
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-bold mb-4 text-white"
           >
             Notre Méthodologie
           </motion.h2>
@@ -51,7 +51,7 @@ const Process: React.FC = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-slate-300"
+            className="text-slate-100"
           >
             Un processus clair en 4 étapes pour garantir le succès de votre transformation.
           </motion.p>
@@ -82,7 +82,7 @@ const Process: React.FC = () => {
                 <div className="absolute inset-0 rounded-full bg-brand-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-400 transition-colors">{step.title}</h3>
-              <p className="text-slate-300 text-sm px-4 leading-relaxed">
+              <p className="text-slate-100 text-sm px-4 leading-relaxed">
                 {step.desc}
               </p>
             </motion.div>
