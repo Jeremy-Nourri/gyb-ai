@@ -56,8 +56,10 @@ const Hero: React.FC = () => {
           <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-slate-900/50 backdrop-blur-xl p-2">
             <img 
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
-              alt="Dashboard IA" 
+              alt="Dashboard d'analyse de données et d'automatisation IA pour entreprise" 
               className="rounded-xl opacity-80"
+              width="600"
+              height="400"
             />
             
             {/* Floating Elements */}

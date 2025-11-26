@@ -64,10 +64,17 @@ const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6'
       }`}
+      role="navigation"
+      aria-label="Navigation principale"
     >
       <div className="container mx-auto px-6 flex justify-between items-center relative z-50">
         {/* Logo */}
-        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center gap-2 group">
+        <a 
+          href="#" 
+          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} 
+          className="flex items-center gap-2 group"
+          aria-label="Retour à l'accueil Grow Your Business"
+        >
           <div className="bg-gradient-to-br from-orange-500 to-red-600 p-2 rounded-lg group-hover:shadow-lg group-hover:shadow-orange-500/20 transition-all duration-300">
             <Rocket className="w-6 h-6 text-white" fill="white" />
           </div>
@@ -102,6 +109,8 @@ const Navbar: React.FC = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           animate={{ rotate: isMobileMenuOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
+          aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
         </motion.button>
